@@ -1,0 +1,22 @@
+#all{margin-left: 40%;}
+
+#side-bar{background-color: blue;}
+
+
+#no-bullets{list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.centertable{margin-left: 10%;
+margin-right: 10%;}
+
+#buttons{display: flex;
+    flex-wrap: nowrap;}
+
+.divsbuttons{
+    width: 50%;
+}
+#rightbutton{
+    float: right;
+}

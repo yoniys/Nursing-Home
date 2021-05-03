@@ -1,0 +1,52 @@
+<div class="centertable">
+  <div class="text-center">
+    <h2>{{week[0]}} - {{week[1]}}</h2>
+  </div>
+  <div id="buttons">
+
+    <div class="divsbuttons"> <button button type="button" class="btn btn-dark" (click)=changeweek(1)>שבוע הבא</button>
+    </div>
+    <div class="divsbuttons"><button type="button" class="btn btn-secondary" id="rightbutton"
+        (click)=changeweek(-1)>שבוע קודם</button></div>
+
+  </div>
+</div>
+<br>
+<div class="text-center centertable">
+  <table class=" table table-bordered ">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let tag of s.tagsTabalMonth">{{tag}}</th>
+      </tr>
+    </thead>
+    <tbody *ngFor='let day of s.week'>
+      <tr>
+        <td *ngFor='let shift of s.numofshifts ;let i =index'>
+          <div *ngFor='let worker of s.workersforshift' style="display: flex; flex-wrap: nowrap;">
+
+            <p #pr style="margin-bottom: 0%;margin-left: 20%;">{{(s.allshiftsarr[pr.id])}}</p>
+          </div>
+
+        </td>
+        <th scope="row">בוקר</th>
+        <th rowspan="3" >{{day}}</th>
+      </tr>
+      <tr>
+        <td *ngFor='let shift of s.numofshifts'>
+          <p #pr *ngFor='let worker of s.workersforshift' style="margin-bottom: 0%;">{{s.allshiftsarr[pr.id]}}</p>
+        </td>
+
+        <th scope="row">ערב</th>
+      </tr>
+      <tr>
+
+        <td *ngFor='let shift of s.numofshifts'>
+          <p #pr *ngFor='let worker of s.workersforshift' style="margin-bottom: 0%;">{{s.allshiftsarr[pr.id]}}</p>
+        </td>
+
+        <th scope="row">לילה</th>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

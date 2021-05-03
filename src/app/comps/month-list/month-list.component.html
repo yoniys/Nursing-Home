@@ -1,0 +1,45 @@
+<div ><button type="button" class="btn btn-primary float-right" (click)=save()>שמור</button></div>
+
+<!-- <button (click)="switchWorker()">{{switchType}}</button> -->
+
+<div class="centertable">
+    <div class="text-center">
+        <h2>{{week[0]}} - {{week[1]}}</h2>
+    </div>
+    <div id="buttons">
+
+        <div class="divsbuttons"> <button button type="button" class="btn btn-dark" (click)=changeweek(1)>שבוע
+                הבא</button>
+        </div>
+        <div class="divsbuttons"><button type="button" class="btn btn-secondary float-right" 
+                (click)=changeweek(-1)>שבוע קודם</button></div>
+
+    </div>
+</div>
+<br><br>
+<div class="text-center centertable">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let tag of s.tagsTabalMonth">{{tag}}</th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor='let day of s.week'>
+            <tr *ngFor='let shift of s.shiftsday'>
+                <td *ngFor='let shift of s.numofshifts '>
+                    <select #select1 (click)='op(select1.value,select1.id)' *ngFor='let workers of s.workersforshift'>
+                        <option>{{''}}</option>
+                        <option *ngFor='let worker of  s.workerslist'>{{worker.name}}</option>
+                    </select>
+                </td>
+                <th scope="row">{{shift}}</th>
+                <th *ngIf='shift=="בוקר"' rowspan="3" >{{day}}</th>
+            </tr>
+
+            
+        </tbody>
+
+    </table>
+</div>
+

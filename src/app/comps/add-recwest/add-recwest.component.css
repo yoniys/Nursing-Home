@@ -1,0 +1,29 @@
+#br{margin-right: 10px;}
+#bl{margin-left: 10px;}
+
+
+#notes_input{
+    width: 60%;
+    height: 70%;
+    direction:rtl;
+    border-radius: 25px;
+}
+
+
+::-webkit-input-placeholder {
+    text-align: center;
+    
+ }
+ .msg_cotainer_send{
+     display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #78e08f;
+    padding: 10px;
+   direction: rtl;
+    width: 40%;
+   text-align: right;
+    overflow-wrap:break-word ;
+}

@@ -1,0 +1,38 @@
+<div class="text-center" >
+
+    <br><br>
+    <h2>רשימת עובדים</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor='let tag of hedtable'>{{tag}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let worker of s. workerslist'>
+                <td> <span class="table-remove">
+                        <button type="button" class="btn btn-danger btn-rounded btn-sm my-0" (click)=delete(worker.id)>
+                            מחק
+                        </button>
+                    </span></td>
+                <td> <span class="table-remove">
+
+                        <button type="button" class="btn btn-info btn-rounded btn-sm my-0" (click)=edit(worker.id)>
+                            עדכן
+                        </button>
+                    </span></td>
+                <td>{{worker.note}}</td>
+                <td>{{worker.car}}</td>
+                <td>{{worker.manPower}}</td>
+                <td>{{worker.startDate}}</td>
+                <td>{{worker.workingType}}</td>
+                <td>{{worker.shifts}}</td>
+                <td>{{worker.gender}}</td>
+                <td>{{worker.manId}}</td>
+                <td>{{worker.name}}</td>
+                <td>{{worker.workingstatus}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

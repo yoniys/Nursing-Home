@@ -1,0 +1,13 @@
+#container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+#divl{margin-right: 40%;}
+h4{text-decoration: underline;}
+
+.space{margin-left: 32%;}
+
+.center{
+    display: flex;
+   margin-left: 32%;}
+   

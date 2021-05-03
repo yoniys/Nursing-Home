@@ -1,0 +1,62 @@
+
+<div class="text-center"><h6 >חפש לפי </h6></div>
+<div class="text-center">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label #nameRadio class="btn btn-outline-primary active" id="name">
+            <input  type="radio" name="options"  autocomplete="off"
+                (change)="sarchOption(nameRadio,dateRadio)"> שם  
+        </label>
+        <label #dateRadio class="btn btn-outline-primary " id="date">
+            <input  type="radio" name="options"  autocomplete="off"
+                (change)="sarchOption(dateRadio,nameRadio)"> תאריך
+        </label>
+    </div>
+</div>
+<br>
+<div *ngIf='searchOption=="name"' class="text-center" >
+    <button class="btn btn-success" id="search" (click)='filter(name.value)'>חפש</button>
+
+    <select #name>
+        <option value="" selected disabled hidden>שם</option>>
+        <option *ngFor='let i of s.workerslist'>{{i.name}}</option>
+    </select>
+   
+</div>
+<div *ngIf='searchOption=="date"'  style="text-align: center;">
+    <input #date type="date">
+    <button class="btn btn-info" >חפש</button>
+</div>
+<br><br>
+<div *ngIf='resultarr' class="centertable ">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">מחלקה </th>
+                <th scope="col">משמרת</th>
+                <th scope="col">שם</th>
+                <th scope="col">תאריך</th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor='let i of resultarr'>
+            <tr>
+                <td>
+                    {{i.department}}
+                </td>
+                <td>
+                    {{i.shift}}
+                </td>
+                <td>
+                    {{i.name}}
+                </td>
+                <td>
+                    {{i.date}}
+                </td>
+            </tr>
+
+
+            <!-- <br> -->
+        </tbody>
+
+    </table>
+</div>

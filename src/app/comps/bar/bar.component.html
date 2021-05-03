@@ -1,0 +1,13 @@
+
+<div style="background-color: rgb(71, 71, 82);"
+class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  border-bottom box-shadow">
+<h5 class="my-0 mr-md-auto font-weight-normal text-white">משכנות אחוזת שרון</h5>
+<nav class="my-2 my-md-0 mr-md-3">
+  <a (click)='s.rout="requests"' class="p-2 text-white"  [routerLink]="['requests']"> בקשות</a>
+  <a (click)='s.rout="add-worker"' class="p-2 text-white" [routerLink]="['add-worker']">הוסף עובד</a>
+  <a (click)='s.rout="workers"' class="p-2 text-white" [routerLink]="['workers']">בנק עובדים</a>
+  <a (click)='s.rout="month list"' class="p-2 text-white" [routerLink]="['month list']">שיבוץ שבועי</a>
+  <a (click)='s.rout="main"' class="p-2 text-white" [routerLink]="['main']">משמרת שבועית</a>
+  <a (click)='s.rout="main"' class="p-2 text-white" [routerLink]="['history']">היסטוריה</a>
+</nav>
+</div>

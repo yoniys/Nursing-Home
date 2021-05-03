@@ -1,0 +1,10 @@
+#all{margin-left: 20%;
+    margin-top: 10%;
+display: flex;
+flex-wrap: nowrap; }
+
+#vl {
+    border-left: 6px solid rgb(11, 12, 11);
+    height: 230px;
+  }
+  .ml{margin-left: 20%;}

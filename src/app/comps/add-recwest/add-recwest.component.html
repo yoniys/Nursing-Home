@@ -1,0 +1,27 @@
+<div class="text-center">
+    <button type="button" class="btn btn-dark float-right" id="br" (click)=changeweek(-1)>שבוע קודם</button>
+    <label>{{week}}</label>
+    <button type="button" class="btn btn-dark float-left" id="bl" (click)=changeweek(1)>שבוע הבא</button>
+</div>
+<br><br>
+<div class="text-center">
+    <div>
+        <textarea #recwest placeholder="כתוב בקשה" [(ngModel)]="title" id="notes_input" rows="5" type="text"
+            (focus)='setbg("#e5fff3")' (blur)='setbg("white")'></textarea>
+    </div>
+    <br><br>
+    <button type="button" class="btn btn-success" (click)="save(recwest.value)">שמור</button>
+</div>
+
+
+<div *ngFor='let note of requestsArr'>
+    <br>
+
+    <div>
+        <p class="msg_cotainer_send"> {{note.note}}</p>
+        <button type="button" class="btn btn-danger btn-rounded btn-sm my-0" (click)='deleteNote(note.id)'>
+            מחק
+        </button>
+    </div>
+
+</div>

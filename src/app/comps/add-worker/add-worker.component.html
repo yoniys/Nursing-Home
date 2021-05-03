@@ -1,0 +1,104 @@
+
+<div class="center">
+    <form class="form-inline text-center " [formGroup]="profile" (ngSubmit)="log()">
+<div>
+        <div id="container">
+            <div id="divl">
+                <br><br>
+                <input class="form-control text-center" type="text" formControlName="name" placeholder="שם" autofocus>
+                <br> <br>
+                <input class="form-control text-center" type="id" formControlName="manId" placeholder=".ת.ז">
+                <br><br>
+                <input formControlName="shifts" class="form-control text-center" type="number"
+                    placeholder="כמה משמרות בשבוע">
+                <br><br>
+
+                <input formControlName="startDate" class="form-control text-center" type="text"
+                    placeholder="תאריך תחילת עבודה">
+                <br><br>
+                <input formControlName="note" class="form-control text-center" type="text" placeholder="הערות">
+
+            </div>
+            <br>
+            
+            <div>
+                <h4>מין</h4>
+
+                <div class="center">
+                    <div>
+                        <label>זכר</label>
+                        <input class="form-check-input" formControlName="gender" name="gender" type="radio" value="זכר">
+                    </div>
+                    <div class="space">
+                        <label>נקבה</label>
+                        <input class="form-check-input" formControlName="gender" name="gender" type="radio"
+                            value="נקבה">
+                    </div>
+                </div>
+                <h4>סוג עובד</h4>
+
+                <div class="center">
+                    <div>
+                        <label>אח/ות</label>
+                        <input id="nurse" formControlName="workingType" name="workingType" type="radio" value="אח/ות">
+                    </div>
+                    <div class="space"><label>מטפל/ת</label>
+                        <input id="Therapist" formControlName="workingType" name="workingType" type="radio"
+                            value="מטפל/ת">
+                    </div>
+                </div>
+                <h4>כוח אדם</h4>
+
+                <div class="center">
+                    <div>
+                        <label>כן</label>
+                        <input formControlName="manPower" name="manPower" type="radio" value="כן">
+                    </div>
+                    <div class="space">
+                        <label>לא</label>
+                        <input formControlName="manPower" name="manPower" type="radio" value="לא">
+                    </div>
+                </div>
+                <h4>הסעה</h4>
+
+                <div class="center">
+                    <div>
+                        <label>כן</label>
+                        <input formControlName="car" name="car" type="radio" value="כן">
+                    </div>
+                    <div class="space">
+                        <label>לא</label>
+                        <input formControlName="car" name="car" type="radio" value="לא">
+                    </div>
+                </div>
+
+                <h4>סטטוס</h4>
+
+                <div class="center">
+                    <div>
+                        <label>עובד</label>
+                        <input formControlName="workingstatus" id="working" name="workingstatus" type="radio"
+                            value="עובד">
+                    </div>
+                    <div class="space">
+                        <label>עזב</label>
+                        <input formControlName="workingstatus" id="not working" name="workingstatus" type="radio"
+                            value="עזב">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <br><br>
+        <div>
+            <button *ngIf="!updatBoolean" type="submit" class="btn btn-primary"> הוסף </button>
+            <button *ngIf="updatBoolean" type="submit" class="btn btn-primary"> עדכן </button>
+        </div>
+    </div>
+        <br><br>
+    </form>
+</div>

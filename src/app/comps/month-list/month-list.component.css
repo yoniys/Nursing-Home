@@ -1,0 +1,19 @@
+.date{
+    font-size: 30px;
+}
+.header{display: flex;
+flex-direction: row;
+}
+
+.centertable{margin-left: 10%;
+    margin-right: 10%;}
+    
+    #buttons{display: flex;
+        flex-wrap: nowrap;}
+    
+    .divsbuttons{
+        width: 50%;
+    }
+    #rightbutton{
+        float: right;
+    }
