@@ -2,9 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-הפרויקט נעשה בשביל שיבוץ עובדים לבית אבות  סיעודי משכנות אחוזת שרון
-הפרוקט עדיין בתהליך נסיון ובניה
+This project is a management tool for administrators to manage workers in a Mishkenot Ahuzat Sharon nursing home.
 
-הפרויקט ניתן לפתיחה דרך קישור זה 
+The project can be opened via this link 
 
 https://nursinghome2020.herokuapp.com
